@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ford Creative — AI UGC ads for pet brands</title>
+<meta name="description" content="30 fresh UGC-style ad variations a month for pet brands, scripted from your real customer reviews. $500 pilot: 10 ads in 5 days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Epilogue:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#17130E;
+    --bag:#FFCF3F;
+    --pink:#F4408A;
+    --paper:#FFFDF7;
+    --quiet:#6B6257;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Epilogue',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+  img,video{max-width:100%;display:block}
+  a{color:inherit}
+
+  /* ---------- caption-plate display type (the signature) ---------- */
+  .plate{
+    font-family:'Anton',sans-serif;
+    display:inline-block;
+    background:var(--ink);
+    color:#fff;
+    padding:.18em .45em .22em;
+    letter-spacing:.01em;
+    line-height:1.05;
+    text-transform:uppercase;
+  }
+  .plate--tilt-l{transform:rotate(-1.6deg)}
+  .plate--tilt-r{transform:rotate(1.2deg)}
+  .plate--pink{background:var(--pink)}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--bag);padding:26px 20px 56px;border-bottom:4px solid var(--ink)}
+  .hero-inner{max-width:980px;margin:0 auto}
+  .brandline{display:flex;justify-content:space-between;align-items:center;margin-bottom:44px;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+  .brandline a{font-weight:700;text-decoration:none;border-bottom:2px solid var(--ink)}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+  @media(min-width:820px){.hero-grid{grid-template-columns:1.15fr .85fr}}
+  .hero h1{font-size:clamp(2.5rem,7.2vw,4.6rem);display:flex;flex-direction:column;align-items:flex-start;gap:.14em}
+  .hero .sub{margin-top:26px;font-size:1.06rem;max-width:34em;font-weight:500}
+  .hero .sub strong{font-weight:800}
+  .hero-ctas{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{font-weight:800;font-size:1rem;text-decoration:none;padding:14px 22px;border:3px solid var(--ink);display:inline-block}
+  .btn--solid{background:var(--ink);color:#fff}
+  .btn--solid:hover{background:var(--pink);border-color:var(--pink)}
+  .btn--ghost{background:transparent}
+  .btn--ghost:hover{background:#fff}
+
+  /* phone-framed video */
+  .phone{
+    width:min(300px,78vw);
+    margin:0 auto;
+    border:4px solid var(--ink);
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:10px 10px 0 var(--ink);
+    background:#000;
+  }
+  .phone video{width:100%;aspect-ratio:9/16;object-fit:cover}
+  .phone-cap{text-align:center;font-size:.82rem;color:var(--ink);margin-top:14px;font-weight:500;max-width:300px;margin-left:auto;margin-right:auto}
+
+  /* ---------- sections ---------- */
+  section{padding:64px 20px}
+  .wrap{max-width:980px;margin:0 auto}
+  .eyebrow{font-weight:800;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--quiet);margin-bottom:14px}
+  h2{font-family:'Anton',sans-serif;font-size:clamp(1.7rem,4.4vw,2.6rem);text-transform:uppercase;letter-spacing:.01em;line-height:1.1;margin-bottom:18px}
+
+  /* truth section */
+  .truth p{font-size:1.15rem;max-width:38em}
+  .truth p+p{margin-top:14px}
+  .truth strong{background:var(--bag);padding:0 .25em}
+
+  /* steps — a real sequence */
+  .steps{background:var(--ink);color:var(--paper)}
+  .steps .eyebrow{color:#B7AC9C}
+  .steps h2{color:#fff}
+  .steps-grid{display:grid;gap:26px;margin-top:34px}
+  @media(min-width:760px){.steps-grid{grid-template-columns:repeat(3,1fr)}}
+  .step{border:2px solid #3A332A;padding:22px}
+  .step .num{font-family:'Anton',sans-serif;font-size:2rem;color:var(--bag)}
+  .step h3{font-size:1.05rem;font-weight:800;margin:10px 0 8px;text-transform:uppercase;letter-spacing:.04em}
+  .step p{font-size:.95rem;color:#D9D2C7}
+  .step p strong{color:#fff}
+  .loopline{margin-top:26px;font-size:.95rem;color:#B7AC9C;max-width:44em}
+  .loopline strong{color:var(--bag)}
+
+  /* offers */
+  .offers-grid{display:grid;gap:22px;margin-top:34px}
+  @media(min-width:820px){.offers-grid{grid-template-columns:repeat(3,1fr)}}
+  .offer{border:3px solid var(--ink);padding:26px 22px;display:flex;flex-direction:column;background:#fff}
+  .offer--pilot{background:var(--pink);color:#fff;border-color:var(--ink);box-shadow:8px 8px 0 var(--ink)}
+  .offer .tag{font-weight:800;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+  .offer--pilot .tag{color:var(--bag)}
+  .offer:not(.offer--pilot) .tag{color:var(--quiet)}
+  .offer .price{font-family:'Anton',sans-serif;font-size:2.3rem;line-height:1}
+  .offer .per{font-size:.9rem;font-weight:500;opacity:.85}
+  .offer ul{list-style:none;margin:18px 0 22px;flex:1}
+  .offer li{padding:7px 0;font-size:.95rem;border-top:1px solid rgba(0,0,0,.14)}
+  .offer--pilot li{border-top-color:rgba(255,255,255,.28)}
+  .offer .btn{text-align:center}
+  .offer--pilot .btn{background:#fff;color:var(--ink);border-color:var(--ink)}
+  .offer--pilot .btn:hover{background:var(--bag)}
+
+  /* honesty strip */
+  .honesty{background:var(--bag);border-top:4px solid var(--ink);border-bottom:4px solid var(--ink);padding:34px 20px}
+  .honesty p{max-width:52em;margin:0 auto;font-weight:600;font-size:.98rem}
+
+  /* CTA */
+  .cta{text-align:center;padding:80px 20px}
+  .cta h2{font-size:clamp(2rem,6vw,3.4rem)}
+  .cta .sub{max-width:36em;margin:16px auto 30px;font-size:1.05rem}
+  .cta .hero-ctas{justify-content:center}
+
+  footer{border-top:3px solid var(--ink);padding:26px 20px;font-size:.85rem;color:var(--quiet);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  footer a{font-weight:700}
+
+  /* load-in for the caption plates */
+  @media(prefers-reduced-motion:no-preference){
+    .hero h1 .plate{opacity:0;transform:translateY(14px);animation:plate-in .45s cubic-bezier(.2,.7,.2,1) forwards}
+    .hero h1 .plate:nth-child(2){animation-delay:.12s}
+    .hero h1 .plate.plate--tilt-l{--tilt:-1.6deg}
+    .hero h1 .plate.plate--tilt-r{--tilt:1.2deg}
+    @keyframes plate-in{to{opacity:1;transform:translateY(0) rotate(var(--tilt,0deg))}}
+  }
+  :focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brandline">
+      <span>Ford Creative</span>
+      <a href="mailto:eli@fordcreativeagency.com">eli@fordcreativeagency.com</a>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <h1 aria-label="Your best ad just wore out.">
+          <span class="plate plate--tilt-l">Your best ad</span>
+          <span class="plate plate--tilt-r">just wore out.</span>
+        </h1>
+        <p class="sub">I build pet brands <strong>30 fresh UGC-style ad variations every month</strong> — scripted from your real customer reviews, captioned, platform-ready, delivered weekly. You never run out of creative to test.</p>
+        <div class="hero-ctas">
+          <a class="btn btn--solid" href="https://instagram.com/fordcreative" rel="noopener">DM me on Instagram</a>
+          <a class="btn btn--ghost" href="#pilot">See the $500 pilot</a>
+        </div>
+      </div>
+      <div>
+        <div class="phone">
+          <video src="sample-hubert.mp4" autoplay muted loop playsinline controls></video>
+        </div>
+        <p class="phone-cap">Spec ad for a real pet brand — researched, scripted, filmed, and captioned by my pipeline in one afternoon. Free, before they ever replied.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="truth">
+  <div class="wrap">
+    <p class="eyebrow">Why this exists</p>
+    <h2>Ad fatigue is the tax every pet brand pays</h2>
+    <p>The same ad shown to the same audience decays — costs creep up, results slide, and the fix is always the same: <strong>more fresh creative than any brand has time to make.</strong></p>
+    <p>Winning pet brands now test dozens of variations a month. Human UGC runs $150–$500 <em>per video</em>. That math is why your creative calendar is always behind — and it's the math I fix.</p>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>Review-mined, not made up</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Mine</h3>
+        <p>I read your <strong>customer reviews</strong> and your ad history, and pull the exact pain points, phrases, and angles your buyers already use.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Script</h3>
+        <p>Those angles become <strong>25+ hooks per product</strong> — testimonial, before/after, label-read, value math, picky-eater test — each built to stop a scroll in 2 seconds.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Ship</h3>
+        <p>You get <strong>30 captioned, platform-ready variations a month</strong>, delivered weekly. Your team runs them on your accounts, your budget, your data.</p>
+      </div>
+    </div>
+    <p class="loopline"><strong>Then it compounds:</strong> each month I read what won in your account and the next batch doubles down on it. Batch two is smarter than batch one. Batch six is unfair.</p>
+  </div>
+</section>
+
+<section id="pilot">
+  <div class="wrap">
+    <p class="eyebrow">Pricing</p>
+    <h2>Start with the pilot. Fire me if it loses.</h2>
+    <div class="offers-grid">
+      <div class="offer offer--pilot">
+        <p class="tag">Start here</p>
+        <p class="price">$500</p>
+        <p class="per">one-time pilot</p>
+        <ul>
+          <li>10 ad variations for one product</li>
+          <li>Delivered in 5 days</li>
+          <li>Test them against your current creative</li>
+          <li>If they lose, you keep the ads and walk</li>
+        </ul>
+        <a class="btn" href="mailto:eli@fordcreativeagency.com?subject=Pilot%20—%2010%20ads%20in%205%20days">Start the pilot</a>
+      </div>
+      <div class="offer">
+        <p class="tag">The engine</p>
+        <p class="price">$2,000</p>
+        <p class="per">per month</p>
+        <ul>
+          <li>30 ad variations monthly</li>
+          <li>Weekly delivery drops</li>
+          <li>Winners iterated, losers cut</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <a class="btn btn--ghost" href="mailto:eli@fordcreativeagency.com?subject=The%20Engine%20—%2030%20variations%2Fmo">Ask about the engine</a>
+      </div>
+      <div class="offer">
+        <p class="tag">Volume + strategy</p>
+        <p class="price">$4,000</p>
+        <p class="per">per month</p>
+        <ul>
+          <li>Higher volume across products</li>
+          <li>Creative strategy + angle planning</li>
+          <li>Monthly performance readouts</li>
+          <li>Priority turnaround</li>
+        </ul>
+        <a class="btn btn--ghost" href="mailto:eli@fordcreativeagency.com?subject=Volume%20%2B%20strategy">Talk volume</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="honesty">
+  <p>Straight up: these are AI-generated UGC-style ads — that's why the price works. Every ad ships platform-compliant and honestly labeled, and every claim is pulled from your product's real reviews and specs. Persona is packaging; facts are facts.</p>
+</div>
+
+<section class="cta">
+  <div class="wrap">
+    <h2><span class="plate plate--pink plate--tilt-l">Want a free sample first?</span></h2>
+    <p class="sub">Send me your product link. I'll make you an ad variation for it — free, no call, no deck. If you like it, we talk. If not, keep it and run it anyway.</p>
+    <div class="hero-ctas">
+      <a class="btn btn--solid" href="https://instagram.com/fordcreative" rel="noopener">DM @fordcreative</a>
+      <a class="btn btn--ghost" href="mailto:eli@fordcreativeagency.com?subject=Free%20sample%20—%20here%27s%20my%20product">Email your product link</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Ford Creative — Eli Ford</span>
+  <a href="https://instagram.com/fordcreative" rel="noopener">@fordcreative</a>
+</footer>
+
+</body>
+</html>
